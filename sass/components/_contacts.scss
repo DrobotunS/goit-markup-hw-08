@@ -1,0 +1,48 @@
+.contact__icon {
+  margin-right: 10px;
+  align-items: center;
+  justify-content: center;
+  transition: fill var(--time-function);
+}
+.contact__link:hover .contact__icon,
+.contact__link:focus .contact__icon {
+  fill: var(--accent-color);
+}
+.address__link {
+  color: var(--accent-button-color);
+  transition: color var(--time-function);
+}
+
+.contact__link--grey {
+  color: var(--footer-link-contact);
+  display: block;
+  transition: color var(--time-function);
+  padding: 0;
+}
+
+.address__link:hover,
+.address__link:focus,
+.contact__link:hover,
+.contact__link:focus {
+  color: var(--accent-color);
+}
+
+.address__list .link {
+  display: block;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address {
+  font-style: inherit;
+}
+.contact {
+  display: flex;
+  margin-left: auto;
+}
+
+.contact__item + .item {
+  margin-left: 50px;
+}

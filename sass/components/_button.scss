@@ -1,0 +1,62 @@
+.button {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+  min-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  color: var(--accent-button-color);
+  font-family: inherit;
+  background-color: var(--accent-color);
+  transition: background-color var(--time-function);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  &:hover,
+  &:focus {
+    background-color: var(--button-primari-hover);
+  }
+}
+
+.filter__button {
+  padding: 6px 22px;
+  min-width: 73px;
+  transition: background-color var(--time-function), color var(--time-function),
+    box-shadow var(--time-function);
+  background-color: var(--button-bg-color);
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.62;
+  &:hover,
+  &:focus {
+    color: var(--accent-button-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.button__icon {
+  height: 50px;
+  fill: var(--accent-button-color);
+  display: flex;
+  align-items: center;
+}
+.filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  .item + .item {
+    margin-left: 8px;
+  }
+}
+
+.filter .button:hover,
+.filter .button:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}

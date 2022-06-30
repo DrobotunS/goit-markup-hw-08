@@ -1,0 +1,30 @@
+.customers__item {
+  --card-item: 6;
+}
+
+.customers__link {
+  width: 100%;
+  height: 92px;
+  border: 1px solid var(--soc-icon-color);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  transition: border-color var(--time-function);
+  &:hover,
+  &:focus {
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+  }
+}
+
+.customers__icon {
+  fill: var(--soc-icon-color);
+  transition: fill var(--time-function);
+}
+
+.customers__link:hover .customers__icon,
+.customers__link:focus .customers__icon {
+  fill: var(--accent-color);
+}
