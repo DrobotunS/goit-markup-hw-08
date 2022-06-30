@@ -1,12 +1,10 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  // padding-top: 94px;
+  // padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--tiam-bg-color);
   text-align: center;
-}
-
-.team__title {
-  margin-bottom: 50px;
 }
 
 .team__item {
@@ -32,8 +30,12 @@
 }
 
 .team__bloc {
-  padding: 30px;
+  // padding: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 .team__list {
-  --card-item: 4;
+  // --card-item: 4;
+  @media screen and (min-width: 768px) {
+    --card-item: 2;
 }

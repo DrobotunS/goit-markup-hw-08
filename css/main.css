@@ -56,6 +56,9 @@ body {
 
 .img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 
 .section {
@@ -65,29 +68,39 @@ body {
 
 .section-title {
   color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.17;
-  margin-bottom: 50px;
+  line-height: 1.18;
+  margin-bottom: 30px;
+  font-size: 28px;
   text-align: center;
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
 
 .card-set {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1 * var(--card-gap));
-  margin-left: calc(-1 * var(--card-gap));
+  margin-bottom: -30px;
 }
 
 .card-item {
-  margin-left: var(--card-gap);
-  margin-top: var(--card-gap);
-  flex-basis: calc(100% / var(--card-item) - var(--card-gap));
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .card-item {
+    width: calc(100% / var(--card-item) - var(--card-gap));
+  }
 }
 
 .nav__logo {
@@ -415,14 +428,10 @@ body {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: var(--tiam-bg-color);
   text-align: center;
-}
-
-.team__title {
-  margin-bottom: 50px;
 }
 
 .team__item {
@@ -446,11 +455,8 @@ body {
 }
 
 .team__bloc {
-  padding: 30px;
-}
-
-.team__list {
-  --card-item: 4;
+  padding-top: 30px;
+  padding-bottom: 24px;
 }
 
 .customers__item {
