@@ -1,16 +1,24 @@
 .card-set {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-top: calc(-1 * var(--card-gap));
-  // margin-left: calc(-1 * var(--card-gap));
   margin-bottom: -30px;
+  @media screen and (min-width: 768px) {
+      margin-left: calc(-1 * var(--card-gap));
+      display: flex;
+      flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+      margin-top: calc(-1 * var(--card-gap));
+      margin-left: calc(-1 * var(--card-gap));
+   }
+    
 }
 .card-item {
-  // margin-left: var(--card-gap);
-  // margin-top: var(--card-gap);
-  // flex-basis: calc(100% / var(--card-item) - var(--card-gap));
   margin-bottom: 30px;
   @media screen and (min-width: 768px) {
-    width: calc(100% / var(--card-item) - var(--card-gap));
+    flex-basis: calc(100% / var(--card-item) - var(--card-gap));
+    margin-left: var(--card-gap);
   }
+    @media screen and (min-width: 1200px) {
+      margin-left: var(--card-gap);
+      margin-top: var(--card-gap);
+    }
 }
