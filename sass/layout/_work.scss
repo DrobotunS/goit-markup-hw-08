@@ -1,8 +1,6 @@
 .section-work {
   @media screen and (min-width: 768px) {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 
   @media screen and (min-width: 1200px) {
@@ -12,8 +10,8 @@
 
 .work__item {
   @media screen and (min-width: 1200px) {
-      fposition: relative;
-    }
+    position: relative;
+  }
   
 }
 
@@ -26,7 +24,7 @@
       padding-top: 27px;
       padding-bottom: 27px;
       background-color: var(--work-bg-color);
-    }
+  }
   
 }
 
@@ -36,18 +34,29 @@
       line-height: 1.14;
       text-transform: uppercase;
       color: var(--logo-footer-color);
-    }
+  }
 }
 
 .work {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
   @media screen and (min-width: 1200px) {
       text-align: center;
-    }
+  }
 }
 
 
 .work__list .card-item {
+  
   @media screen and (min-width: 1200px) {
       flex-basis: calc(100% / 3 - 30px);
-    }
+  }
 }

@@ -426,9 +426,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .section-work {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
+    display: none;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -439,7 +437,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .work__item {
-    fposition: relative;
+    position: relative;
   }
 }
 
@@ -464,6 +462,18 @@ body {
   }
 }
 
+.work {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 @media screen and (min-width: 1200px) {
   .work {
     text-align: center;
@@ -530,8 +540,20 @@ body {
   }
 }
 
-.customers__item {
-  --card-item: 6;
+@media screen and (min-width: 480px) {
+  .customers__item {
+    --card-item: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customers__item {
+    --card-item: 3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .customers__item {
+    --card-item: 6;
+  }
 }
 
 .customers__link {
