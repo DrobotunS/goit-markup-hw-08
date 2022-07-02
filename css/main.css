@@ -61,8 +61,14 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section-title {
@@ -102,6 +108,13 @@ body {
 
 .card-set {
   margin-bottom: -30px;
+  margin-left: calc(-1 * var(--card-gap));
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 320px) {
+  .card-set {
+    display: flex;
+  }
 }
 @media screen and (min-width: 768px) {
   .card-set {
@@ -119,6 +132,8 @@ body {
 
 .card-item {
   margin-bottom: 30px;
+  flex-basis: calc(100% / var(--card-item) - var(--card-gap));
+  margin-left: var(--card-gap);
 }
 @media screen and (min-width: 768px) {
   .card-item {
@@ -362,17 +377,30 @@ body {
 }
 
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--primery-bg-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imeges/hero.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imeges/hero-img-phon.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imeges/hero-img-tablet.jpg);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../imeges/hero.jpg);
+  }
 }
 
 .hero__title {
@@ -380,13 +408,25 @@ body {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  width: 696px;
+  width: 100%;
   color: var(--text-hero-color);
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+@media screen and (min-width: 387px) {
+  .hero__title {
+    width: 360px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero__title {
+    font-size: 44px;
+    line-height: 1.36;
+    width: 696px;
+  }
 }
 
 .feature__hidden {
@@ -420,18 +460,24 @@ body {
   justify-content: center;
 }
 
-.feature__list {
-  --card-item: 4;
-}
-
 @media screen and (min-width: 768px) {
-  .section-work {
-    display: none;
+  .feature__list {
+    --card-item: 2;
   }
 }
 @media screen and (min-width: 1200px) {
+  .feature__list {
+    --card-item: 4;
+  }
+}
+
+.section-work {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
   .section-work {
-    padding-top: 0;
+    padding-bottom: 94px;
   }
 }
 
@@ -463,19 +509,11 @@ body {
 }
 
 .work {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  display: none;
 }
 @media screen and (min-width: 1200px) {
   .work {
+    display: block;
     text-align: center;
   }
 }
@@ -487,16 +525,8 @@ body {
 }
 
 .team {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: var(--tiam-bg-color);
   text-align: center;
-}
-@media screen and (min-width: 1200px) {
-  .team {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
 }
 
 .team__item {
@@ -540,10 +570,8 @@ body {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .customers__item {
-    --card-item: 2;
-  }
+.customers__item {
+  --card-item: 2;
 }
 @media screen and (min-width: 768px) {
   .customers__item {
@@ -674,7 +702,7 @@ body {
 }
 
 .portfolio__item {
-  width: 370px;
+  width: 100%;
   padding: 20px 24px;
   display: inline-block;
   box-sizing: border-box;
@@ -715,8 +743,20 @@ body {
   transition: transform var(--time-function), color 350ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
 }
 
-.portfolio__list .card-item {
-  flex-basis: calc(33.3333333333% - 30px);
+@media screen and (min-width: 320px) {
+  .portfolio__list .card-item {
+    flex-basis: calc(100% - 30px);
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__list .card-item {
+    flex-basis: calc(50% - 30px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__list .card-item {
+    flex-basis: calc(33.3333333333% - 30px);
+  }
 }
 
 .backdrop {

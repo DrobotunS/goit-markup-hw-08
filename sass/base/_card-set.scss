@@ -1,5 +1,11 @@
 .card-set {
   margin-bottom: -30px;
+  margin-left: calc(-1 * var(--card-gap));
+  flex-wrap: wrap;
+  @media screen and (min-width: 320px) {
+      display: flex;
+    }
+    
   @media screen and (min-width: 768px) {
       margin-left: calc(-1 * var(--card-gap));
       display: flex;
@@ -13,6 +19,8 @@
 }
 .card-item {
   margin-bottom: 30px;
+  flex-basis: calc(100% / var(--card-item) - var(--card-gap));
+  margin-left: var(--card-gap);
   @media screen and (min-width: 768px) {
     flex-basis: calc(100% / var(--card-item) - var(--card-gap));
     margin-left: var(--card-gap);

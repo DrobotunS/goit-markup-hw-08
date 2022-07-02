@@ -1,7 +1,5 @@
 .customers__item {
-  @media screen and (min-width: 480px) {
-      --card-item: 2;
-    }
+  --card-item: 2;
   @media screen and (min-width: 768px) {
       --card-item: 3;
     }

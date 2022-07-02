@@ -1,11 +1,9 @@
 .section-work {
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-
+  padding-top: 0;
+  padding-bottom: 0;
   @media screen and (min-width: 1200px) {
-    padding-top: 0;
-  }
+      padding-bottom: 94px;
+    }
 }
 
 .work__item {
@@ -38,17 +36,9 @@
 }
 
 .work {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
+  display: none;
   @media screen and (min-width: 1200px) {
+    display: block;
       text-align: center;
   }
 }
