@@ -1,6 +1,6 @@
 .footer {
   background-color: var(--primery-bg-color);
-  padding: 60px 0;
+
   .soc__link {
     background-color: var(--footer-soc-link-color);
   }
@@ -8,13 +8,18 @@
     fill: var(--accent-button-color);
   }
   .footer__contact {
-    margin-right: 70px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 70px;
+    }
   }
   .footer__input {
     line-height: 1.25;
-    width: 358px;
+    width: 100%;
     padding: 15px 16px;
-    margin-right: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    margin-bottom: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     color: var(--accent-button-color);
@@ -22,21 +27,46 @@
     background-color: inherit;
     transition: border-color var(--time-function);
     outline: none;
+    @media screen and (min-width: 768px) {
+      width: 450px;
+      display: flex;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-right: 12px;
+      margin-bottom: 0;
+      width: 358px;
+    }
   }
 }
 .footer__container {
-  display: flex;
-  align-items: baseline;
+  padding: 60px 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 768px) {
+    padding-left: 76px;
+    padding-right: 89px;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .footer__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
-  display: block;
+  display: flex;
+  justify-content: center;
   text-transform: uppercase;
   color: var(--logo-footer-color);
   margin-bottom: 20px;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 
 .footer .soc__link:hover,
@@ -47,8 +77,10 @@
   border-color: var(--accent-color);
 }
 .footer__email {
-  display: flex;
-  align-items: flex-end;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: flex-end;
+  }
 }
 .icon-submit {
   margin-left: 10px;
@@ -56,4 +88,16 @@
 }
 .footer__form {
   margin-left: auto;
+}
+.footer__input-wrap {
+  font-size: 16px;
+  line-height: 1.25;
+}
+.footer__blok {
+  display: block;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 }

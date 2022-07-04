@@ -7,8 +7,11 @@
 }
 
 .nav__list {
-  display: flex;
-  color: var(--title-text-color);
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    color: var(--title-text-color);
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -22,8 +25,6 @@
 .nav__link,
 .contact__link {
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   display: flex;
   align-items: center;
   position: relative;
@@ -31,6 +32,10 @@
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+}
+.nav__link {
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav__link:hover,
@@ -49,4 +54,10 @@
   height: 4px;
   border-radius: 2px;
   background-color: var(--accent-color);
+  @media screen and (min-width: 768px) {
+    bottom: -2px;
+  }
+  @media screen and (min-width: 1200px) {
+    bottom: -1px;
+  }
 }

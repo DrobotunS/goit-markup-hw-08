@@ -1,13 +1,25 @@
 .nav__logo {
-  margin-right: 93px;
+  margin-right: auto;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
 }
 
 .logo {
   color: var(--accent-color);
   font-family: Raleway, cursive;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .logo--black {
@@ -18,6 +30,12 @@
   color: var(--logo-footer-color);
 }
 .footer__logo {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
+  @media screen and (min-width: 768px) {
+  }
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }

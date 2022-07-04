@@ -1,6 +1,12 @@
 .soc {
   display: flex;
   justify-content: center;
+  margin-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 0;
+  }
 }
 
 .soc__item {
