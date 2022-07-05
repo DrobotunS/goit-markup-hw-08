@@ -17,4 +17,9 @@
   padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
 }

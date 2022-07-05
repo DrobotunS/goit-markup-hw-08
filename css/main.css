@@ -111,6 +111,11 @@ body {
   padding-bottom: 48px;
   padding-left: 40px;
   padding-right: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  overflow-y: auto;
 }
 
 .card-set {
@@ -1206,10 +1211,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   margin-bottom: 32px;
-}
-
-.mob-menu__item:last-child {
-  margin-bottom: 302px;
 }
 
 .mob-contact__tel {
