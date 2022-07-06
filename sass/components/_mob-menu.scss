@@ -3,9 +3,11 @@
   top: 0;
   left: 0;
   width: 100%;
+  opacity: 1;
   height: 100vh;
   z-index: 1;
   background-color: var(--accent-button-color);
+  transition: transform var(--time-function);
 }
 .mob-menu__item {
   font-weight: 500;
@@ -72,4 +74,9 @@
     padding-left: 10px;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
   }
+}
+.mob-menu.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
