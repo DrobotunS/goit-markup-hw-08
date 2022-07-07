@@ -28,16 +28,16 @@
 .team__bloc {
   padding-top: 30px;
   padding-bottom: 24px;
+  background-color: var(--accent-button-color);
   @media screen and (min-width: 1200px) {
-      padding: 30px;
-    }
-
+    padding: 30px;
+  }
 }
 .team__list {
   @media screen and (min-width: 768px) {
     --card-item: 2;
- }
+  }
   @media screen and (min-width: 1200px) {
-      --card-item: 4;
-    }
+    --card-item: 4;
+  }
 }
