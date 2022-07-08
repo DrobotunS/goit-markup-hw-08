@@ -9,8 +9,6 @@
     padding-right: 89px;
   }
   @media screen and (min-width: 1200px) {
-    display: flex;
-    align-items: baseline;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -54,6 +52,12 @@
       display: flex;
     }
   }
+}
+.footer__container {
+  @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: baseline;
+    }
 }
 
 .footer__title {

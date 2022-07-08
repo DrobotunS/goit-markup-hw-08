@@ -337,22 +337,11 @@ body {
   flex-wrap: wrap;
   align-content: start;
   margin-bottom: 40px;
-}
-.filter .item:not(:last-child) {
-  margin-right: 8px;
-}
-.filter .item:nth-child(-n+3) {
-  margin-bottom: 15px;
+  gap: 15px 8px;
 }
 @media screen and (min-width: 768px) {
   .filter {
     justify-content: center;
-    margin-bottom: 30px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .filter {
-    margin-bottom: 50px;
   }
 }
 
@@ -563,19 +552,6 @@ body {
   }
 }
 
-.feature__hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  margin: -1px;
-}
-
 .feature__title {
   margin-bottom: 10px;
   color: var(--title-text-color);
@@ -766,8 +742,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .footer {
-    display: flex;
-    align-items: baseline;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -817,6 +791,13 @@ body {
 }
 .footer .footer__input .container {
   display: flex;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__title {
@@ -890,7 +871,7 @@ body {
   letter-spacing: 0.06em;
 }
 
-.portfolio__hidden {
+.visually__hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -1227,6 +1208,10 @@ body {
   margin-bottom: 32px;
 }
 
+.mob-menu__item:last-child {
+  margin-bottom: 0;
+}
+
 .mob-menu__link {
   transition: color var(--time-function);
 }
@@ -1269,7 +1254,6 @@ body {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: var(--accent-color);
-  margin-right: 10px;
 }
 
 .mob-soc__item + .mob-soc__item {
@@ -1282,14 +1266,10 @@ body {
   }
 }
 
-.mob-soc__item + .mob-soc__item:focus {
-  transform: rotate(90deg);
-}
-
 .mob-soc__item:last-child {
   padding-left: 10px;
 }
-@media screen and (min-width: 333px) {
+@media screen and (min-width: 380px) {
   .mob-soc__item:last-child {
     border-left: none;
     padding-left: 0;
@@ -1298,13 +1278,8 @@ body {
 @media screen and (min-width: 424px) {
   .mob-soc__item:last-child {
     padding-left: 10px;
-    margin-top: 0;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
   }
-}
-
-.mob-soc__item:last-child:focus {
-  transform: rotate(90deg);
 }
 
 .mob-soc__item:nth-last-child(2) {
@@ -1312,7 +1287,7 @@ body {
   border-left: none;
   padding-left: 0;
 }
-@media screen and (min-width: 335px) {
+@media screen and (min-width: 338px) {
   .mob-soc__item:nth-last-child(2) {
     padding-left: 10px;
     border-left: 1px solid rgba(33, 33, 33, 0.2);
