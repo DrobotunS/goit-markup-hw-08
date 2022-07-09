@@ -18,8 +18,8 @@
   .footer__contact {
     margin-bottom: 60px;
     @media screen and (min-width: 768px) {
-        margin-bottom: 0;
-      }
+      margin-bottom: 0;
+    }
     @media screen and (min-width: 1200px) {
       margin-right: 70px;
     }
@@ -55,9 +55,9 @@
 }
 .footer__container {
   @media screen and (min-width: 1200px) {
-      display: flex;
-      align-items: baseline;
-    }
+    display: flex;
+    align-items: baseline;
+  }
 }
 
 .footer__title {
@@ -75,8 +75,8 @@
 }
 .footer__email {
   @media screen and (min-width: 1200px) {
-      display: flex;
-    }
+    display: flex;
+  }
 }
 
 .footer .soc__link:hover,
@@ -108,5 +108,6 @@
   }
   @media screen and (min-width: 1200px) {
     display: flex;
+    margin-bottom: 0;
   }
 }
