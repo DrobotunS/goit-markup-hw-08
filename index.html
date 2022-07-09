@@ -256,30 +256,35 @@
           <ul class="list team__list card-set">
             <li class="team__item card-item">
               <picture>
+                <source srcset="./imeges/demianenko.webp 1x, ./imeges/demianenko-2x.webp 2x" media="(min-width: 1200px)" type="imege/webp" />
                 <source
                   srcset="
                     ./imeges/demianenko.jpg    1x,
                     ./imeges/demianenko-2x.jpg 2x
                   "
-                  media="(min-width: 1200px)"
+                  media="(min-width: 1200px)" type="imege/jpeg"
                 />
+                <source srcset="./imeges/demianenko-tab.webp 1x, ./imeges/demianenko-tab-2x.webp 2x" media="(min-width: 768px)"
+                  type="imege/webp" />
                 <source
                   srcset="
                     ./imeges/demianenko-tab.jpg    1x,
                     ./imeges/demianenko-tab-2x.jpg 2x
                   "
-                  media="(min-width: 768px)"
+                  media="(min-width: 768px)" type="imege/jpeg"
                 />
+                <source srcset="./imeges/demianenko-phon.webp 1x, ./imeges/demianenko-phon-2x.webp 2x" media="(max-width: 767px)"
+                  type="imege/webp" />
                 <source
                   srcset="
                     ./imeges/demianenko-phon.jpg    1x,
                     ./imeges/demianenko-phon-2x.jpg 2x
                   "
-                  media="(min-width: 360px)"
+                  media="(max-width: 767px)" type="imege/jpeg"
                 />
                 <img
                   class="img"
-                  src="./imeges/demianenko.jpg"
+                  src="./imeges/demianenko-phon.jpg"
                   alt="Фото сотрудника Игоря Демьяненко"
                   width="450"
                   height="460"
@@ -337,25 +342,25 @@
               <picture>
                 <source
                   srcset="./imeges/repina.jpg 1x, ./imeges/repina-2x.jpg 2x"
-                  media="(min-width: 1200px)"
+                  media="(min-width: 1200px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/repina-tab.jpg    1x,
                     ./imeges/repina-tab-2x.jpg 2x
                   "
-                  media="(min-width: 768px)"
+                  media="(min-width: 768px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/repina-phon.jpg    1x,
                     ./imeges/repina-phon-2x.jpg 2x
                   "
-                  media="(min-width: 360px)"
+                  media="(max-width: 767px)" type="imege/jpeg"
                 />
                 <img
                   class="img"
-                  src="./imeges/repina.jpg"
+                  src="./imeges/repina-phon.jpg"
                   alt="Фото сотрудника Ольги Репиной"
                   width="450"
                   height="460"
@@ -413,25 +418,25 @@
               <picture>
                 <source
                   srcset="./imeges/tarasov.jpg 1x, ./imeges/tarasov-2x.jpg 2x"
-                  media="(min-width: 1200px)"
+                  media="(min-width: 1200px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/tarasov-tab.jpg    1x,
                     ./imeges/tarasov-tab-2x.jpg 2x
                   "
-                  media="(min-width: 768px)"
+                  media="(min-width: 768px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/tarasov-phon.jpg    1x,
                     ./imeges/tarasov-phon-2x.jpg 2x
                   "
-                  media="(min-width: 360px)"
+                  media="(max-width: 767px)" type="imege/jpeg"
                 />
                 <img
                   class="img"
-                  src="./imeges/tarasov.jpg"
+                  src="./imeges/tarasov-phon.jpg"
                   alt="Фото сотрудника Николая Тарасова"
                   width="450"
                   height="460"
@@ -489,25 +494,25 @@
               <picture>
                 <source
                   srcset="./imeges/ermakov.jpg 1x, ./imeges/ermakov-2x.jpg 2x"
-                  media="(min-width: 1200px)"
+                  media="(min-width: 1200px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/ermakov-tab.jpg    1x,
                     ./imeges/ermakov-tab-2x.jpg 2x
                   "
-                  media="(min-width: 768px)"
+                  media="(min-width: 768px)" type="imege/jpeg"
                 />
                 <source
                   srcset="
                     ./imeges/ermakov-phon.jpg    1x,
                     ./imeges/ermakov-phon-2x.jpg 2x
                   "
-                  media="(min-width: 360px)"
+                  media="(max-width: 767px)" type="imege/jpeg"
                 />
                 <img
                   class="img"
-                  src="./imeges/ermakov.jpg"
+                  src="./imeges/ermakov-phon.jpg"
                   alt="Фото сотрудника Михаила Ермакова"
                   width="450"
                   height="460"
@@ -721,7 +726,6 @@
             >Подпишитесь на рассылку</label
           >
           <div class="footer__email">
-            <span class="footer__input-wrap">
               <input
                 type="email"
                 class="footer__input"
@@ -729,7 +733,6 @@
                 placeholder="E-mail"
                 maxlength="25"
               />
-            </span>
             <button type="submit" class="button button__icon">
               Подписаться
               <svg width="24" height="24" class="icon-submit">
